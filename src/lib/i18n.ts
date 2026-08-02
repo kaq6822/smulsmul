@@ -65,18 +65,24 @@ export function t(lang: Lang) {
   return ui[lang];
 }
 
-/** ko 기준 경로에 언어 접두사를 붙인다. 예: localizePath('/apps/colorwalk/', 'en') → '/en/apps/colorwalk/' */
-export function localizePath(path: string, lang: Lang): string {
-  return lang === 'ko' ? path : `/en${path}`;
+/** 배포 base 경로 (예: '/smulsmul'). base 미설정 시 빈 문자열. */
+const BASE = import.meta.env.BASE_URL.replace(/\/+$/, '');
+
+/** 사이트 내부 절대 경로에 base 접두사를 붙인다. 예: withBase('/favicon.svg') → '/smulsmul/favicon.svg' */
+export function withBase(path: string): string {
+  return `${BASE}${path}`;
 }
 
-/** 현재 경로에서 언어 접두사를 제거한 ko 기준 경로를 얻는다. */
+/** ko 기준 경로에 base와 언어 접두사를 붙인다. 예: localizePath('/apps/colorwalk/', 'en') → '/smulsmul/en/apps/colorwalk/' */
+export function localizePath(path: string, lang: Lang): string {
+  return withBase(lang === 'ko' ? path : `/en${path}`);
+}
+
+/** 현재 경로에서 base와 언어 접두사를 제거한 ko 기준 경로를 얻는다. */
 export function basePathOf(pathname: string): string {
-  return pathname.startsWith('/en/')
-    ? pathname.slice(3)
-    : pathname === '/en'
-      ? '/'
-      : pathname;
+  let p = pathname.startsWith(BASE) ? pathname.slice(BASE.length) : pathname;
+  if (!p.startsWith('/')) p = `/${p}`;
+  return p.startsWith('/en/') ? p.slice(3) : p === '/en' ? '/' : p;
 }
 
 export function formatDate(date: Date, lang: Lang): string {

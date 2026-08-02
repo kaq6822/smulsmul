@@ -1,6 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { localizePath, t, type Lang } from '../lib/i18n';
+import { localizePath, t, withBase, type Lang } from '../lib/i18n';
 
 interface Props {
   lang: Lang;
@@ -27,7 +27,7 @@ const Tag = released ? 'a' : 'div';
   {
     icon ? (
       <img
-        src={icon}
+        src={withBase(icon)}
         alt=""
         width="64"
         height="64"

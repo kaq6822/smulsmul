@@ -4,7 +4,8 @@ import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  site: 'https://smulsmul.github.io',
+  site: 'https://kaq6822.github.io',
+  base: '/smulsmul',
   trailingSlash: 'always',
   i18n: {
     defaultLocale: 'ko',

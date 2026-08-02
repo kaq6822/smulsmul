@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://smulsmul.github.io/sitemap-index.xml
+Sitemap: https://kaq6822.github.io/smulsmul/sitemap-index.xml
