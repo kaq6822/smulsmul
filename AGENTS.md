@@ -11,6 +11,7 @@ Astro v5 + Tailwind CSS v4(vite 플러그인), 정적 빌드, 한국어 기본 +
 - 페이지는 ko/en 쌍으로 유지. UI 문자열은 `src/lib/i18n.ts`의 `ui`에 추가.
 - 언어 자동 전환은 `BaseLayout.astro`의 인라인 스크립트가 처리(localStorage `smulsmul-lang` 선택 > 브라우저 언어, 비한국어 → `/en/`). 페이지를 ko/en 쌍으로 유지하지 않으면 리다이렉트가 404로 떨어짐.
 - `main` push 시 GitHub Actions가 자동 배포함. push 전 `npm run build`로 검증.
+- 커밋 메시지는 **Conventional Commits**(`feat:`, `fix:`, `docs:`, `chore:` 등)를 따르고, 성격이 다른 변경은 커밋을 분리.
 
 ## 구조
 
