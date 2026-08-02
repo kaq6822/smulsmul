@@ -1,0 +1,44 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { render } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import { formatDate, localizePath, t, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+  entry: CollectionEntry<'legal'>;
+  appName: string;
+  appSlug: string;
+}
+
+const { lang, entry, appName, appSlug } = Astro.props;
+const strings = t(lang);
+const { title, effectiveDate, lastUpdated } = entry.data;
+const { Content } = await render(entry);
+---
+
+<BaseLayout lang={lang} title={`${title} — ${appName}`}>
+  <div class="mx-auto max-w-3xl px-5 py-12">
+    <a
+      href={localizePath(`/apps/${appSlug}/`, lang)}
+      class="text-sm text-indigo-600 hover:underline">← {strings.backToApp}</a
+    >
+    <h1 class="mt-4 text-3xl font-bold tracking-tight text-slate-900">
+      {title}
+    </h1>
+    <p class="mt-2 text-sm text-slate-500">
+      {strings.effectiveDate}: {formatDate(effectiveDate, lang)}
+      {
+        lastUpdated && (
+          <>
+            {' · '}
+            {strings.lastUpdated}: {formatDate(lastUpdated, lang)}
+          </>
+        )
+      }
+    </p>
+    <article class="prose prose-slate mt-8 max-w-none">
+      <Content />
+    </article>
+  </div>
+</BaseLayout>

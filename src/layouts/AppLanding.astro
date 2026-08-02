@@ -1,0 +1,126 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { render } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import StoreBadges from '../components/StoreBadges.astro';
+import { localizePath, t, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+  entry: CollectionEntry<'apps'>;
+}
+
+const { lang, entry } = Astro.props;
+const strings = t(lang);
+const slug = entry.id.split('/')[0];
+const {
+  name,
+  tagline,
+  icon,
+  screenshots,
+  playStoreUrl,
+  appStoreUrl,
+  themeColor,
+  features,
+} = entry.data;
+const { Content } = await render(entry);
+
+const legalLinks = [
+  { href: localizePath(`/apps/${slug}/privacy/`, lang), label: strings.privacy },
+  { href: localizePath(`/apps/${slug}/terms/`, lang), label: strings.terms },
+  { href: localizePath(`/apps/${slug}/support/`, lang), label: strings.support },
+];
+---
+
+<BaseLayout lang={lang} title={`${name} — ${tagline}`} description={tagline}>
+  <!-- 히어로 -->
+  <section
+    class="relative overflow-hidden"
+    style={`background: linear-gradient(160deg, ${themeColor}14, transparent 60%)`}
+  >
+    <div class="mx-auto max-w-5xl px-5 py-16 text-center sm:py-24">
+      {
+        icon && (
+          <img
+            src={icon}
+            alt={`${name} 아이콘`}
+            width="112"
+            height="112"
+            class="mx-auto h-28 w-28 rounded-[1.75rem] border border-slate-100 shadow-lg"
+          />
+        )
+      }
+      <h1 class="mt-6 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+        {name}
+      </h1>
+      <p class="mx-auto mt-3 max-w-xl text-lg text-slate-600">{tagline}</p>
+      <div class="mt-8 flex justify-center">
+        <StoreBadges
+          lang={lang}
+          playStoreUrl={playStoreUrl}
+          appStoreUrl={appStoreUrl}
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- 본문 (마크다운) -->
+  <section class="mx-auto max-w-3xl px-5 py-12">
+    <article class="prose prose-slate max-w-none">
+      <Content />
+    </article>
+  </section>
+
+  <!-- 주요 기능 -->
+  {
+    features.length > 0 && (
+      <section class="mx-auto max-w-5xl px-5 py-8">
+        <h2 class="text-2xl font-bold text-slate-900">{strings.features}</h2>
+        <div class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {features.map((f) => (
+            <div class="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
+              <h3 class="font-semibold text-slate-900">{f.title}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                {f.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <!-- 스크린샷 -->
+  {
+    screenshots.length > 0 && (
+      <section class="mx-auto max-w-5xl px-5 py-8">
+        <h2 class="text-2xl font-bold text-slate-900">{strings.screenshots}</h2>
+        <div class="mt-6 flex gap-4 overflow-x-auto pb-4">
+          {screenshots.map((src) => (
+            <img
+              src={src}
+              alt={`${name} 스크린샷`}
+              class="h-96 w-auto shrink-0 rounded-2xl border border-slate-100 shadow-sm"
+              loading="lazy"
+            />
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <!-- 법적 문서 링크 -->
+  <section class="mx-auto max-w-5xl px-5 py-12">
+    <div
+      class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 rounded-2xl bg-slate-50 px-6 py-5 text-sm text-slate-600"
+    >
+      {
+        legalLinks.map((l) => (
+          <a href={l.href} class="hover:text-slate-900 hover:underline">
+            {l.label}
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

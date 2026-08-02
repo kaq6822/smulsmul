@@ -1,0 +1,25 @@
+---
+import { t, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const strings = t(lang);
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-slate-100">
+  <div
+    class="mx-auto flex max-w-5xl flex-col items-center gap-2 px-5 py-8 text-center text-sm text-slate-500"
+  >
+    <p>
+      <a
+        href="mailto:smulsmul2020@gmail.com"
+        class="hover:text-slate-700 hover:underline">smulsmul2020@gmail.com</a
+      >
+    </p>
+    <p>© {year} smulsmul. {strings.footerRights}</p>
+  </div>
+</footer>

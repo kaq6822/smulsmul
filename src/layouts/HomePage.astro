@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import AppCard from '../components/AppCard.astro';
+import { t, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const strings = t(lang);
+
+const entries = (
+  await getCollection('apps', (e) => e.id.endsWith(`/${lang}`))
+).sort(
+  (a, b) =>
+    a.data.order - b.data.order || a.data.name.localeCompare(b.data.name),
+);
+---
+
+<BaseLayout lang={lang} title={`smulsmul — ${strings.siteTagline}`}>
+  <section class="mx-auto max-w-5xl px-5 pb-8 pt-16 sm:pt-24">
+    <h1 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+      smulsmul<span class="text-indigo-500">.</span>
+    </h1>
+    <p class="mt-4 max-w-xl text-lg text-slate-600">{strings.siteTagline}</p>
+  </section>
+
+  <section class="mx-auto max-w-5xl px-5 py-8">
+    <h2 class="text-xl font-bold text-slate-900">{strings.apps}</h2>
+    <div class="mt-5 grid gap-5 sm:grid-cols-2">
+      {entries.map((entry) => <AppCard lang={lang} entry={entry} />)}
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,50 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import { localizePath, t, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+  entry: CollectionEntry<'apps'>;
+}
+
+const { lang, entry } = Astro.props;
+const strings = t(lang);
+const slug = entry.id.split('/')[0];
+const { name, supportEmail, icon } = entry.data;
+---
+
+<BaseLayout lang={lang} title={`${strings.support} — ${name}`}>
+  <div class="mx-auto max-w-3xl px-5 py-12">
+    <a
+      href={localizePath(`/apps/${slug}/`, lang)}
+      class="text-sm text-indigo-600 hover:underline">← {strings.backToApp}</a
+    >
+    <div class="mt-6 flex items-center gap-4">
+      {
+        icon && (
+          <img
+            src={icon}
+            alt=""
+            width="56"
+            height="56"
+            class="h-14 w-14 rounded-xl border border-slate-100"
+          />
+        )
+      }
+      <h1 class="text-3xl font-bold tracking-tight text-slate-900">
+        {name} {strings.support}
+      </h1>
+    </div>
+    <p class="mt-6 leading-relaxed text-slate-600">
+      {strings.contactDescription}
+    </p>
+    <a
+      href={`mailto:${supportEmail}`}
+      class="mt-6 inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-6 py-3 font-semibold text-white transition hover:bg-indigo-500"
+    >
+      ✉️ {supportEmail}
+    </a>
+    <p class="mt-4 text-sm text-slate-500">{strings.responseNote}</p>
+  </div>
+</BaseLayout>

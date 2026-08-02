@@ -1,0 +1,31 @@
+---
+import { basePathOf, localizePath, t, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const strings = t(lang);
+
+const basePath = basePathOf(Astro.url.pathname);
+const toggleHref = localizePath(basePath, lang === 'ko' ? 'en' : 'ko');
+const homeHref = localizePath('/', lang);
+---
+
+<header class="border-b border-slate-100">
+  <div
+    class="mx-auto flex max-w-5xl items-center justify-between px-5 py-4"
+  >
+    <a href={homeHref} class="text-lg font-bold tracking-tight text-slate-900">
+      smulsmul<span class="text-indigo-500">.</span>
+    </a>
+    <nav class="flex items-center gap-4 text-sm">
+      <a
+        href={toggleHref}
+        class="rounded-full border border-slate-200 px-3 py-1 text-slate-600 transition hover:border-slate-300 hover:text-slate-900"
+        >{strings.langToggle}</a
+      >
+    </nav>
+  </div>
+</header>

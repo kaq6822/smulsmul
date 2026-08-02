@@ -1,0 +1,12 @@
+---
+import AppLanding from '../../../../layouts/AppLanding.astro';
+import { appPaths } from '../../../../lib/routes';
+
+export async function getStaticPaths() {
+  return appPaths('en');
+}
+
+const { entry } = Astro.props;
+---
+
+<AppLanding lang="en" entry={entry} />

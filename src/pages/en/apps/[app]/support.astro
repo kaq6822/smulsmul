@@ -1,0 +1,12 @@
+---
+import SupportPage from '../../../../layouts/SupportPage.astro';
+import { appPaths } from '../../../../lib/routes';
+
+export async function getStaticPaths() {
+  return appPaths('en');
+}
+
+const { entry } = Astro.props;
+---
+
+<SupportPage lang="en" entry={entry} />

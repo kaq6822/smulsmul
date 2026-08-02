@@ -1,0 +1,13 @@
+---
+import LegalPage from '../../../layouts/LegalPage.astro';
+import { legalPaths } from '../../../lib/routes';
+
+export async function getStaticPaths() {
+  return legalPaths('ko', 'privacy');
+}
+
+const { entry, appEntry } = Astro.props;
+const { app } = Astro.params;
+---
+
+<LegalPage lang="ko" entry={entry} appName={appEntry.data.name} appSlug={app} />
