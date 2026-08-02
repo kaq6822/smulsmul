@@ -23,6 +23,7 @@ const homeHref = localizePath('/', lang);
     <nav class="flex items-center gap-4 text-sm">
       <a
         href={toggleHref}
+        data-set-lang={lang === 'ko' ? 'en' : 'ko'}
         class="rounded-full border border-slate-200 px-3 py-1 text-slate-600 transition hover:border-slate-300 hover:text-slate-900"
         >{strings.langToggle}</a
       >

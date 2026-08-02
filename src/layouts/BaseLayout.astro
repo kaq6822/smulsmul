@@ -18,6 +18,7 @@ const basePath = basePathOf(Astro.url.pathname);
 const koUrl = new URL(localizePath(basePath, 'ko'), Astro.site);
 const enUrl = new URL(localizePath(basePath, 'en'), Astro.site);
 const canonicalUrl = lang === 'ko' ? koUrl : enUrl;
+const base = withBase('');
 ---
 
 <html lang={lang}>
@@ -37,6 +38,46 @@ const canonicalUrl = lang === 'ko' ? koUrl : enUrl;
     <meta property="og:description" content={desc} />
     <meta property="og:url" content={canonicalUrl} />
     <meta name="generator" content={Astro.generator} />
+    <script is:inline define:vars={{ base, pageLang: lang }}>
+      // 언어 자동 전환: 사용자가 토글로 선택한 언어(localStorage) > 브라우저 언어.
+      // 한국어가 아닌 브라우저는 영어판으로 보낸다. 렌더링 전에 실행되어 깜빡임을 막는다.
+      (function () {
+        var KEY = 'smulsmul-lang';
+        try {
+          var stored = localStorage.getItem(KEY);
+          var desired =
+            stored === 'ko' || stored === 'en'
+              ? stored
+              : (navigator.language || '').toLowerCase().indexOf('ko') === 0
+                ? 'ko'
+                : 'en';
+          if (desired !== pageLang) {
+            var rel = location.pathname.slice(base.length) || '/';
+            var target = null;
+            if (desired === 'en') {
+              // 이미 /en 경로인데 pageLang이 ko인 경우(404 등)는 건드리지 않는다 — 리다이렉트 루프 방지.
+              if (rel !== '/en' && rel.indexOf('/en/') !== 0)
+                target = base + '/en' + rel;
+            } else if (rel === '/en' || rel.indexOf('/en/') === 0) {
+              target = base + (rel === '/en' ? '/' : rel.slice(3));
+            }
+            if (target && target !== location.pathname)
+              location.replace(target + location.search + location.hash);
+          }
+          // 언어 토글 클릭 시 선택을 저장해 이후 방문에서 우선 적용한다.
+          document.addEventListener('click', function (e) {
+            var a = e.target && e.target.closest
+              ? e.target.closest('[data-set-lang]')
+              : null;
+            if (a) {
+              try {
+                localStorage.setItem(KEY, a.getAttribute('data-set-lang'));
+              } catch (_) {}
+            }
+          });
+        } catch (_) {}
+      })();
+    </script>
   </head>
   <body class="min-h-dvh bg-white text-slate-800 antialiased flex flex-col">
     <Header lang={lang} />
