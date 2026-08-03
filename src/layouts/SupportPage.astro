@@ -1,7 +1,7 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import { getEntry, render, type CollectionEntry } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
-import { localizePath, t, withBase, type Lang } from '../lib/i18n';
+import { formatDate, localizePath, t, withBase, type Lang } from '../lib/i18n';
 
 interface Props {
   lang: Lang;
@@ -12,6 +12,10 @@ const { lang, entry } = Astro.props;
 const strings = t(lang);
 const slug = entry.id.split('/')[0];
 const { name, supportEmail, icon } = entry.data;
+
+// 지원 문서가 있는 앱은 본문을 렌더링하고, 없으면 기본 문의 안내만 보여준다.
+const doc = await getEntry('support', `${slug}/${lang}`);
+const Content = doc ? (await render(doc)).Content : null;
 ---
 
 <BaseLayout lang={lang} title={`${strings.support} — ${name}`}>
@@ -36,12 +40,27 @@ const { name, supportEmail, icon } = entry.data;
         {name} {strings.support}
       </h1>
     </div>
-    <p class="mt-6 leading-relaxed text-slate-600">
-      {strings.contactDescription}
-    </p>
+    {
+      doc?.data.lastUpdated && (
+        <p class="mt-2 text-sm text-slate-500">
+          {strings.lastUpdated}: {formatDate(doc.data.lastUpdated, lang)}
+        </p>
+      )
+    }
+    {
+      Content ? (
+        <article class="prose prose-slate mt-8 max-w-none">
+          <Content />
+        </article>
+      ) : (
+        <p class="mt-6 leading-relaxed text-slate-600">
+          {strings.contactDescription}
+        </p>
+      )
+    }
     <a
       href={`mailto:${supportEmail}`}
-      class="mt-6 inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-6 py-3 font-semibold text-white transition hover:bg-indigo-500"
+      class="mt-8 inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-6 py-3 font-semibold text-white transition hover:bg-indigo-500"
     >
       ✉️ {supportEmail}
     </a>

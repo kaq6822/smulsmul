@@ -39,4 +39,13 @@ const legal = defineCollection({
   }),
 });
 
-export const collections = { apps, legal };
+// 지원 페이지 본문 (선택 사항 — 문서가 없는 앱은 기본 문의 안내만 표시된다)
+// 파일 경로: src/content/support/<slug>/<lang>.md  (id 예: "colorwalk/ko")
+const support = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/support' }),
+  schema: z.object({
+    lastUpdated: z.coerce.date().optional(),
+  }),
+});
+
+export const collections = { apps, legal, support };
