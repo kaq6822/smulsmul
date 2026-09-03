@@ -1,7 +1,7 @@
 ---
 title: Privacy Policy
 type: privacy
-effectiveDate: 2026-08-03
+effectiveDate: 2026-09-04
 ---
 
 This Privacy Policy applies to **ColorWalk** (the "App"), a mobile application provided free of charge (with in-app advertising) by **Beomjun Kang** (the "Service Provider"). The Service Provider values your privacy and complies with applicable data protection laws.
@@ -37,6 +37,7 @@ These identifiers are **pseudonymous** — they are not linked to directly ident
 
 - Photos and daily records you capture or select are **stored only on your device**. They are never uploaded to the Service Provider's servers or shared externally.
 - The App may request **camera and photo library permissions** in order to take or import photos. These permissions are used only when you use those features, and the remaining features continue to work if you decline.
+- The App may also request **notification permission** for the daily reminder that tells you the color of the day. This is requested only when you turn the reminder on yourself in the settings screen (off by default), and the notification is **scheduled and shown entirely on your device**. No information is sent to any server to deliver it, and the notification content does not include your photos or records. The remaining features continue to work if you decline.
 
 ## 3. Third-party services
 
@@ -65,7 +66,7 @@ The App is provided free of charge and displays in-app advertising through **Goo
 
 - Where prior consent is required, the App presents a consent form through Google's **User Messaging Platform (UMP)** to request your consent to the collection and use of personal data for ad personalization.
 - **If consent is not obtained, the App does not request ads.**
-- You can change your choices at any time via **"Ad privacy choices" in the App's settings screen**. That option is shown to users in regions where prior consent is required.
+- You can change your choices at any time via **"Privacy choices" in the App's settings screen** (which manages your advertising privacy choices). That option is shown to users in regions where prior consent is required.
 
 ### Google signals (Analytics Advertising Features)
 
@@ -78,7 +79,7 @@ The App uses **Google signals data collection**, one of the Google Analytics Adv
 
 You may opt out of personalized advertising at any time by any of the following means:
 
-- **In the App**: "Ad privacy choices" in ColorWalk's settings screen (shown to users in regions where prior consent is required)
+- **In the App**: "Privacy choices" in ColorWalk's settings screen, which manages your advertising privacy choices (shown to users in regions where prior consent is required)
 - **iOS**: Settings → Privacy & Security → Tracking, and turn off tracking permission for ColorWalk
 - **Android**: Settings → Google → All services → Ads, and delete or reset your advertising ID
 - **At the Google account level**: Turn off Ads Personalization in Google Ad Settings — <https://myadcenter.google.com>
@@ -99,7 +100,7 @@ The Service Provider does not sell or rent your information. Automatically colle
 - **Crash data**: Firebase Crashlytics keeps crash stack traces and associated identifiers (including Crashlytics installation UUIDs and Firebase installation IDs) for **90 days** before beginning the process of removing them from live and backup systems.
 - **Analytics data**: In Google Analytics, event-level data is deleted automatically after **2 months** and user-level data after **14 months**. Aggregated statistical reporting data, which cannot identify an individual, is not subject to that retention period and may be kept.
 - **Advertising data**: Retention and deletion of data processed using advertising identifiers is governed by Google's advertising policies; see the Google documentation linked in Section 3 for details.
-- **On-device data**: Photos and records stored on your device are deleted when you uninstall the App.
+- **On-device data**: Photos and records stored on your device can be deleted at any time using "Delete All Data" in the App's settings screen, and they are removed together with the App if you uninstall it.
 - If you wish to delete information you provided directly to the Service Provider by email, contact us at the address below and we will respond within a reasonable time.
 
 ## 7. Your rights
@@ -107,7 +108,8 @@ The Service Provider does not sell or rent your information. Automatically colle
 You may exercise the following rights at any time:
 
 - **Opt out of collection**: Uninstalling the App stops all collection of information by the App. You can use the standard uninstall process available on your device or through the app marketplace.
-- **Withdraw permissions**: You can revoke camera and photo library permissions at any time in your device settings.
+- **Delete on-device data**: Use "Delete All Data" in the App's settings screen to remove photos, memos, and stats stored on your device without uninstalling the App.
+- **Withdraw permissions**: You can revoke camera, photo library, and notification permissions at any time in your device settings.
 - **Opt out of personalized advertising**: You can opt out at any time using the methods described under "How to opt out of advertising" in Section 4.
 - **Access, correction, deletion, and suspension of processing**: Contact us at the address below and we will respond within the period required by applicable law.
 
