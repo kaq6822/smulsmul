@@ -1,5 +1,5 @@
 ---
-name: DevLingo
+name: DevVocab
 tagline: Learn practical IT English in context
 icon: /images/devlingo/icon.png
 screenshots: []
@@ -16,7 +16,7 @@ features:
     description: Keep progress, achievements, and saved words on your device at your own pace.
 ---
 
-DevLingo helps you learn English expressions used in everyday IT work through context, not isolated word lists.
+DevVocab helps you learn English expressions used in everyday IT work through context, not isolated word lists.
 
 Meet terms such as `fan-out`, `churn`, and `idempotent` in the sentences and paragraphs where they are actually used: technical documentation, design reviews, and incident-response channels. Move between a guided course and focused training to build the reading confidence you need at work.
 

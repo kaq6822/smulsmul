@@ -1,14 +1,16 @@
 ---
 title: Terms of Service
 type: terms
-effectiveDate: 2026-08-08
+effectiveDate: 2026-09-26
 ---
 
-These Terms govern your use of DevLingo (the "App"). By installing or using the App, you agree to these Terms.
+These Terms govern your use of DevVocab (the "App"). By installing or using the App, you agree to these Terms.
 
 ## 1. Service
 
 The App provides courses, repeatable training, a word list, and progress features for practical IT English. The Service Provider may add, change, or discontinue features.
+
+The App may include rewarded advertising. A one-time in-app purchase offered through the relevant app store may remove advertising. Apple App Store or Google Play processes purchases and payments; the Service Provider does not directly process payment-method information.
 
 ## 2. Content and Data
 

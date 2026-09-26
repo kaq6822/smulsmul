@@ -1,5 +1,5 @@
 ---
-name: DevLingo
+name: DevVocab
 tagline: IT 실무 영어를 맥락 속에서 익히다
 icon: /images/devlingo/icon.png
 screenshots: []
@@ -16,7 +16,7 @@ features:
     description: 진도, 업적, 단어장을 기기 안에서 관리하며 내 페이스로 이어갑니다.
 ---
 
-DevLingo는 IT 실무에서 자주 마주치는 영어 표현을 단어장이 아닌 맥락으로 학습하는 앱입니다.
+DevVocab은 IT 실무에서 자주 마주치는 영어 표현을 단어장이 아닌 맥락으로 학습하는 앱입니다.
 
 `fan-out`, `churn`, `idempotent`처럼 기술 문서, 설계 리뷰, 장애 대응 채널에서 실제로 쓰이는 표현을 문장과 문단 안에서 만나보세요. 순차 코스와 반복 트레이닝을 오가며, 업무에서 바로 읽고 이해할 수 있는 영어 감각을 길러갑니다.
 
