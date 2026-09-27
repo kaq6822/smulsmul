@@ -50,7 +50,7 @@ For detailed information on the collection, use, storage, and destruction of per
 ## 🧾 4. App Information
 
 - **App Name:** ColorWalk
-- **Developer:** Beomjun Kang
+- **Developer:** smulsmul
 - **Email:** [smulsmul2020@gmail.com](mailto:smulsmul2020@gmail.com)
 - **Version:** 1.1.0
 - **Distribution Platform:** Apple App Store / Google Play Store

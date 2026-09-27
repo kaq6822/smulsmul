@@ -50,7 +50,7 @@ lastUpdated: 2026-08-03
 ## 🧾 4. 앱 정보
 
 - **앱 이름:** 컬러워크 (ColorWalk)
-- **개발자:** Beomjun Kang
+- **개발사:** 스물스물
 - **이메일:** [smulsmul2020@gmail.com](mailto:smulsmul2020@gmail.com)
 - **버전:** 1.1.0
 - **배포 플랫폼:** Apple App Store / Google Play Store

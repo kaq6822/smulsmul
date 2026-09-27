@@ -1,10 +1,10 @@
 ---
 title: Privacy Policy
 type: privacy
-effectiveDate: 2026-09-04
+effectiveDate: 2026-09-27
 ---
 
-This Privacy Policy applies to **ColorWalk** (the "App"), a mobile application provided free of charge (with in-app advertising) by **Beomjun Kang** (the "Service Provider"). The Service Provider values your privacy and complies with applicable data protection laws.
+This Privacy Policy applies to **ColorWalk** (the "App"), a mobile application provided free of charge (with in-app advertising) by **smulsmul** (Representative: Beomjun Kang; the "Service Provider"). The Service Provider values your privacy and complies with applicable data protection laws.
 
 ## 1. Information we collect
 
@@ -135,7 +135,7 @@ By using the App, you consent to the processing of your information as set out i
 
 For questions about this policy, complaints, or remedy requests regarding the handling of personal information, please contact:
 
-- Data Protection Officer: Beomjun Kang
+- Data Protection Officer: Beomjun Kang (Representative)
 - Email: **smulsmul2020@gmail.com**
 
 ## 13. Dispute resolution (Republic of Korea)

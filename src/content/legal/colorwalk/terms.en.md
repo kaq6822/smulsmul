@@ -1,10 +1,10 @@
 ---
 title: Terms of Service
 type: terms
-effectiveDate: 2026-08-02
+effectiveDate: 2026-09-27
 ---
 
-These terms govern your use of **ColorWalk** (the "App"). By installing and using the App, you agree to these terms.
+These terms govern your use of **ColorWalk** (the "App"), provided by **smulsmul** (the "Service Provider"). By installing and using the App, you agree to these terms.
 
 ## 1. The service
 
@@ -13,7 +13,7 @@ The App is a lifestyle app that provides daily color recommendations and photo-b
 ## 2. Your content and data
 
 - Photos and records you create in the App are stored on your device. You own them and are responsible for managing them.
-- The developer is not liable for data loss caused by device replacement, app deletion, or device failure. Please back up important records separately.
+- The Service Provider is not liable for data loss caused by device replacement, app deletion, or device failure. Please back up important records separately.
 
 ## 3. Prohibited conduct
 
@@ -25,11 +25,11 @@ You must not:
 
 ## 4. Intellectual property
 
-All intellectual property rights in the App, including its design, logo, and content, belong to the developer.
+All intellectual property rights in the App, including its design, logo, and content, belong to the Service Provider.
 
 ## 5. Limitation of liability
 
-The App is provided "as is." To the extent permitted by law, the developer is not liable for any damages arising from your use of, or inability to use, the App.
+The App is provided "as is." To the extent permitted by law, the Service Provider is not liable for any damages arising from your use of, or inability to use, the App.
 
 ## 6. Changes to these terms
 

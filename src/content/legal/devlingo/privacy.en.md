@@ -1,10 +1,10 @@
 ---
 title: Privacy Policy
 type: privacy
-effectiveDate: 2026-09-26
+effectiveDate: 2026-09-27
 ---
 
-This Privacy Policy applies to DevVocab (the "App"), provided by Beomjun Kang (the "Service Provider").
+This Privacy Policy applies to DevVocab (the "App"), provided by smulsmul (Representative: Beomjun Kang; the "Service Provider").
 
 ## 1. Information We Process
 

@@ -1,10 +1,10 @@
 ---
 title: Terms of Service
 type: terms
-effectiveDate: 2026-09-26
+effectiveDate: 2026-09-27
 ---
 
-These Terms govern your use of DevVocab (the "App"). By installing or using the App, you agree to these Terms.
+These Terms govern your use of DevVocab (the "App"), provided by smulsmul (the "Service Provider"). By installing or using the App, you agree to these Terms.
 
 ## 1. Service
 

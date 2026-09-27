@@ -1,10 +1,10 @@
 ---
 title: Terms of Service
 type: terms
-effectiveDate: 2026-08-08
+effectiveDate: 2026-09-27
 ---
 
-These Terms govern your use of Closetimo (the "App"). By installing or using the App, you agree to these Terms.
+These Terms govern your use of Closetimo (the "App"), provided by smulsmul (the "Service Provider"). By installing or using the App, you agree to these Terms.
 
 ## 1. Service
 
