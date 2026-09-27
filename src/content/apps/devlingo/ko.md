@@ -2,11 +2,17 @@
 name: DevVocab
 tagline: IT 실무 영어를 맥락 속에서 익히다
 icon: /images/devlingo/icon.png
-screenshots: []
+screenshots:
+  - /images/devlingo/ko/01-course.jpg
+  - /images/devlingo/ko/02-flashcard.jpg
+  - /images/devlingo/ko/03-in-context.jpg
+  - /images/devlingo/ko/04-speed-match.jpg
+  - /images/devlingo/ko/05-review.jpg
+  - /images/devlingo/ko/06-profile.jpg
 supportEmail: smulsmul2020@gmail.com
 status: released
 order: 3
-themeColor: '#0f766e'
+themeColor: '#3b6ef6'
 features:
   - title: 실무 문맥 학습
     description: 기술 문서와 설계 리뷰, 장애 대응에서 쓰이는 표현을 실제 문장으로 익힙니다.

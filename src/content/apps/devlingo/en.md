@@ -2,11 +2,17 @@
 name: DevVocab
 tagline: Learn practical IT English in context
 icon: /images/devlingo/icon.png
-screenshots: []
+screenshots:
+  - /images/devlingo/en/01-course.jpg
+  - /images/devlingo/en/02-flashcard.jpg
+  - /images/devlingo/en/03-in-context.jpg
+  - /images/devlingo/en/04-speed-match.jpg
+  - /images/devlingo/en/05-review.jpg
+  - /images/devlingo/en/06-profile.jpg
 supportEmail: smulsmul2020@gmail.com
 status: released
 order: 3
-themeColor: '#0f766e'
+themeColor: '#3b6ef6'
 features:
   - title: Real-world context
     description: Learn expressions from technical docs, design reviews, and incident response in real sentences.
