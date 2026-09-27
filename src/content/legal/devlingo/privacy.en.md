@@ -19,7 +19,6 @@ The App uses the following third-party services:
 | Service | Purpose | Information |
 | --- | --- | --- |
 | Google AdMob | Rewarded advertising, ad measurement, and advertising consent management | [Google Privacy Policy](https://policies.google.com/privacy) |
-| Firebase Analytics | App usage and feature-use statistics | [Google/Firebase Privacy](https://firebase.google.com/support/privacy) |
 | Firebase Crashlytics | Crash and error diagnosis and app stability improvements | [Google/Firebase Privacy](https://firebase.google.com/support/privacy) |
 | Apple App Store / StoreKit | Processing iOS in-app purchases and checking the ad-free entitlement | [Apple Privacy Policy](https://www.apple.com/legal/privacy/) |
 | Google Play Billing | Processing Android in-app purchases and checking the ad-free entitlement | [Google Privacy Policy](https://policies.google.com/privacy) |
@@ -28,9 +27,7 @@ During ad requests and delivery, the advertising SDK may process device identifi
 
 On iOS, the App may request permission for advertising-related tracking. The core learning features remain available if permission is denied. Whether an ad is shown and whether it is personalised depends on consent status and the advertising platform's policies. Advertising privacy choices can be changed through the advertising privacy option available in the App's profile or settings screen.
 
-Firebase Analytics may process app launches, screen and feature usage, basic device and app information, and usage statistics. Firebase Crashlytics may process crash information, error logs, app state, device model, operating-system version, and app version needed to diagnose errors. These services are not used to directly identify individuals and are used for service improvement and error response. More information about Firebase's processing and available choices is provided in the [Firebase Privacy and Security documentation](https://firebase.google.com/support/privacy).
-
-The App does not request sensitive device permissions such as camera, photos, location, contacts, or microphone.
+Firebase Crashlytics may process crash information, error logs, app state, device model, operating-system version, app version, and the Firebase installation ID needed to diagnose errors. Learning data such as progress and saved words is not included in error reports. This information is not used to directly identify individuals and is used for error response and stability improvements. You can turn error reporting off with the "Send crash logs" switch on the app's Profile screen; turning it off also deletes reports on the device that have not been sent yet. The app does not use an SDK that analyzes usage statistics. More information about Firebase's processing is provided in the [Firebase Privacy and Security documentation](https://firebase.google.com/support/privacy).
 
 ## 3. Retention and Deletion
 

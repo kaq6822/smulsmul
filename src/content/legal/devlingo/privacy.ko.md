@@ -19,7 +19,6 @@ effectiveDate: 2026-09-27
 | 서비스 | 처리 목적 | 관련 안내 |
 | --- | --- | --- |
 | Google AdMob | 보상형 광고 제공, 광고 성과 측정 및 광고 동의 관리 | [Google 개인정보처리방침](https://policies.google.com/privacy) |
-| Firebase Analytics | 앱 이용 현황과 기능 사용 통계 분석 | [Google/Firebase 개인정보처리방침](https://firebase.google.com/support/privacy) |
 | Firebase Crashlytics | 앱 오류 및 충돌 원인 분석과 안정성 개선 | [Google/Firebase 개인정보처리방침](https://firebase.google.com/support/privacy) |
 | Apple App Store / StoreKit | iOS 인앱 구매 처리 및 광고 제거 권한 확인 | [Apple 개인정보처리방침](https://www.apple.com/legal/privacy/) |
 | Google Play Billing | Android 인앱 구매 처리 및 광고 제거 권한 확인 | [Google 개인정보처리방침](https://policies.google.com/privacy) |
@@ -30,7 +29,7 @@ iOS에서는 광고 관련 추적 권한을 요청할 수 있습니다. 이용�
 
 또한 카메라, 사진, 위치, 연락처, 마이크 등 민감한 기기 권한을 요청하지 않습니다.
 
-Firebase Analytics는 앱 실행, 화면·기능 이용, 기기·앱 기본 정보 및 이용 통계를 처리할 수 있습니다. Firebase Crashlytics는 앱 충돌 정보, 오류 로그, 앱 상태, 기기 모델, 운영체제 버전 및 앱 버전 등 오류 진단에 필요한 정보를 처리할 수 있습니다. 이러한 정보는 개인을 직접 식별하기 위한 목적으로 사용하지 않으며, 서비스 개선과 오류 대응에 사용합니다. Firebase의 처리 방식과 이용자 선택권에 관한 자세한 내용은 [Firebase 개인정보처리방침](https://firebase.google.com/support/privacy)에서 확인할 수 있습니다.
+Firebase Crashlytics는 앱 충돌 정보, 오류 로그, 앱 상태, 기기 모델, 운영체제 버전, 앱 버전 및 Firebase 설치 식별자 등 오류 진단에 필요한 정보를 처리할 수 있습니다. 학습 진도, 저장한 단어 등 학습 데이터는 오류 보고에 포함하지 않습니다. 이러한 정보는 개인을 직접 식별하기 위한 목적으로 사용하지 않으며, 오류 대응과 안정성 개선에 사용합니다. 이용자는 앱의 프로필 화면에 있는 "크래시 로그 보내기" 스위치로 오류 보고를 끌 수 있으며, 끄면 아직 전송되지 않은 보고도 기기에서 삭제됩니다. 앱은 이용 통계를 분석하는 SDK를 사용하지 않습니다. Firebase의 처리 방식에 관한 자세한 내용은 [Firebase 개인정보처리방침](https://firebase.google.com/support/privacy)에서 확인할 수 있습니다.
 
 ## 3. 보유 기간 및 삭제
 
