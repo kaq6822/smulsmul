@@ -28,6 +28,8 @@ export const ui = {
     notFoundTitle: '페이지를 찾을 수 없습니다',
     notFoundDescription: '주소가 잘못되었거나 삭제된 페이지입니다.',
     langToggle: 'English',
+    footerOwner: '스물스물',
+    footerBusinessInfo: '상호 스물스물 · 대표 강범준 · 사업자등록번호 815-31-01725',
     footerRights: 'All rights reserved.',
   },
   en: {
@@ -57,6 +59,9 @@ export const ui = {
     notFoundTitle: 'Page not found',
     notFoundDescription: 'The page you are looking for does not exist.',
     langToggle: '한국어',
+    footerOwner: 'smulsmul',
+    footerBusinessInfo:
+      'smulsmul · Representative: Beomjun Kang · Business Registration No. 815-31-01725',
     footerRights: 'All rights reserved.',
   },
 } as const;
