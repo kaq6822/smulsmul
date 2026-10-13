@@ -1,7 +1,7 @@
 ---
 title: Privacy Policy
 type: privacy
-effectiveDate: 2026-09-27
+effectiveDate: 2026-10-13
 ---
 
 This Privacy Policy applies to DevVocab (the "App"), provided by smulsmul (Representative: Beomjun Kang; the "Service Provider").
@@ -20,6 +20,7 @@ The App uses the following third-party services:
 | --- | --- | --- |
 | Google AdMob | Rewarded advertising, ad measurement, and advertising consent management | [Google Privacy Policy](https://policies.google.com/privacy) |
 | Firebase Crashlytics | Crash and error diagnosis and app stability improvements | [Google/Firebase Privacy](https://firebase.google.com/support/privacy) |
+| Firebase Analytics | Aggregated app usage statistics, such as counts of completed and abandoned sessions | [Google/Firebase Privacy](https://firebase.google.com/support/privacy) |
 | Apple App Store / StoreKit | Processing iOS in-app purchases and checking the ad-free entitlement | [Apple Privacy Policy](https://www.apple.com/legal/privacy/) |
 | Google Play Billing | Processing Android in-app purchases and checking the ad-free entitlement | [Google Privacy Policy](https://policies.google.com/privacy) |
 
@@ -27,7 +28,9 @@ During ad requests and delivery, the advertising SDK may process device identifi
 
 On iOS, the App may request permission for advertising-related tracking. The core learning features remain available if permission is denied. Whether an ad is shown and whether it is personalised depends on consent status and the advertising platform's policies. Advertising privacy choices can be changed through the advertising privacy option available in the App's profile or settings screen.
 
-Firebase Crashlytics may process crash information, error logs, app state, device model, operating-system version, app version, and the Firebase installation ID needed to diagnose errors. Learning data such as progress and saved words is not included in error reports. This information is not used to directly identify individuals and is used for error response and stability improvements. You can turn error reporting off with the "Send crash logs" switch on the App's Profile screen; turning it off also deletes reports on the device that have not been sent yet. The App does not use SDKs for analysing app usage statistics, such as Firebase Analytics. More information about Firebase's processing is provided in the [Firebase Privacy and Security documentation](https://firebase.google.com/support/privacy).
+Firebase Crashlytics may process crash information, error logs, app state, device model, operating-system version, app version, and the Firebase installation ID needed to diagnose errors. Learning data such as progress and saved words is not included in error reports. This information is not used to directly identify individuals and is used for error response and stability improvements. You can turn error reporting off with the "Send crash logs" switch on the App's Profile screen; turning it off also deletes reports on the device that have not been sent yet. More information about Firebase's processing is provided in the [Firebase Privacy and Security documentation](https://firebase.google.com/support/privacy).
+
+Firebase Analytics is used to compile app usage statistics. The App sends counts of completed and abandoned sessions and the practice type, when the daily session limit is reached, the outcome of watching an ad or of a purchase or restore attempt, and whether onboarding and the tutorial were completed. In doing so, Firebase may also process basic information such as an app-instance identifier, device model, operating-system version, app version, and approximate location derived from the IP address, together with automatically collected events such as app opens and engagement time. Learning content such as the terms you study, your answers, progress, XP, and saved words is not sent, and usage statistics are not combined with advertising identifiers or used to personalise ads. You can turn usage statistics off with the "Send usage statistics" switch on the App's Profile screen. Event-level usage statistics are retained for 2 months.
 
 The App does not request sensitive device permissions such as camera, photos, location, contacts, or microphone.
 
