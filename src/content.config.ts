@@ -13,7 +13,8 @@ const apps = defineCollection({
     playStoreUrl: z.string().url().optional(),
     appStoreUrl: z.string().url().optional(),
     supportEmail: z.string().email(),
-    status: z.enum(['released', 'coming-soon']).default('released'),
+    status: z.enum(['released', 'preview', 'coming-soon']).default('released'),
+    availabilityNote: z.string().optional(),
     order: z.number().default(0),
     themeColor: z.string().default('#6366f1'),
     features: z
@@ -22,7 +23,7 @@ const apps = defineCollection({
   }),
 });
 
-// 법적 문서 (개인정보처리방침, 이용약관)
+// 법적 문서 (개인정보처리방침, 이용약관, 결제·운영 정책)
 // 파일 경로: src/content/legal/<slug>/<type>.<lang>.md  (id 예: "colorwalk/privacy.ko")
 const legal = defineCollection({
   loader: glob({
@@ -31,12 +32,17 @@ const legal = defineCollection({
     // 기본 slug화는 "privacy.ko" → "privacyko"로 점을 지우므로 경로를 그대로 id로 사용
     generateId: ({ entry }) => entry.replace(/\.md$/, ''),
   }),
-  schema: z.object({
-    title: z.string(),
-    type: z.enum(['privacy', 'terms']),
-    effectiveDate: z.coerce.date(),
-    lastUpdated: z.coerce.date().optional(),
-  }),
+  schema: z
+    .object({
+      title: z.string(),
+      type: z.enum(['privacy', 'terms', 'billing', 'operations']),
+      status: z.enum(['published', 'draft']).default('published'),
+      effectiveDate: z.coerce.date().optional(),
+      lastUpdated: z.coerce.date().optional(),
+    })
+    .refine((doc) => doc.status === 'draft' || Boolean(doc.effectiveDate), {
+      message: '시행 중인 법적 문서에는 effectiveDate가 필요합니다.',
+    }),
 });
 
 // 지원 페이지 본문 (선택 사항 — 문서가 없는 앱은 기본 문의 안내만 표시된다)

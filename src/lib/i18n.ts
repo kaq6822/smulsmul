@@ -8,6 +8,8 @@ export const ui = {
       'smulsmul의 모바일 앱 소개, 개인정보처리방침, 지원 페이지입니다.',
     apps: '앱',
     comingSoon: '준비 중',
+    preview: '출시 준비',
+    invitationEnquiry: '초대 이용 문의',
     viewDetails: '자세히 보기',
     features: '주요 기능',
     screenshots: '스크린샷',
@@ -16,6 +18,12 @@ export const ui = {
     getOnAppStore: 'App Store에서 받기',
     privacy: '개인정보처리방침',
     terms: '이용약관',
+    billing: '유료서비스·결제 약관',
+    operations: '서비스 운영·장애 대응 정책',
+    policyNavigation: '약관 및 정책',
+    draft: '출시 준비 초안',
+    draftNotice:
+      '아직 시행되지 않은 검토용 문서입니다. 확정된 내용과 시행일은 서비스 제공 전에 안내하며, 이 페이지를 열람하는 것만으로 약관이나 개인정보 처리에 동의한 것으로 보지 않습니다.',
     support: '지원 및 문의',
     contact: '문의하기',
     contactDescription:
@@ -39,6 +47,8 @@ export const ui = {
       'Landing pages, privacy policies, and support for smulsmul mobile apps.',
     apps: 'Apps',
     comingSoon: 'Coming soon',
+    preview: 'Preparing for launch',
+    invitationEnquiry: 'Ask about an invitation',
     viewDetails: 'Learn more',
     features: 'Features',
     screenshots: 'Screenshots',
@@ -47,6 +57,12 @@ export const ui = {
     getOnAppStore: 'Download on the App Store',
     privacy: 'Privacy Policy',
     terms: 'Terms of Service',
+    billing: 'Paid Service & Billing Terms',
+    operations: 'Service Operations & Outage Policy',
+    policyNavigation: 'Terms and policies',
+    draft: 'Pre-launch draft',
+    draftNotice:
+      'This document is a draft and is not yet effective. Final terms and an effective date will be provided before service begins. Viewing this page does not constitute acceptance of terms or consent to personal data processing.',
     support: 'Support',
     contact: 'Contact us',
     contactDescription:

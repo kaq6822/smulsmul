@@ -15,8 +15,8 @@ Astro v5 + Tailwind CSS v4(vite 플러그인), 정적 빌드, 한국어 기본 +
 
 ## 구조
 
-- `src/content/apps/<slug>/{ko,en}.md` — 앱 메타데이터(frontmatter) + 랜딩 본문. `status: coming-soon`이면 홈 카드만 생성되고 서브 페이지는 안 만들어짐.
-- `src/content/legal/<slug>/{privacy,terms}.{ko,en}.md` — 법적 문서. id에 점(`.`)을 유지하기 위해 `content.config.ts`의 glob 로더에 커스텀 `generateId`가 있음 — 제거 금지.
+- `src/content/apps/<slug>/{ko,en}.md` — 앱 메타데이터(frontmatter) + 랜딩 본문. `status: coming-soon`이면 홈 카드만 생성됨. `preview`는 출시 준비 표시와 소개·정책·지원 페이지를 생성하고, `released`는 출시된 앱에 사용.
+- `src/content/legal/<slug>/{privacy,terms,billing,operations}.{ko,en}.md` — 법적 문서. billing·operations는 선택 사항. `status: draft`는 미시행 초안 표시, `published`(기본값)는 시행일 필수. id에 점(`.`)을 유지하기 위해 `content.config.ts`의 glob 로더에 커스텀 `generateId`가 있음 — 제거 금지.
 - `src/pages/` 라우트는 얇은 래퍼이고 실제 화면은 `src/layouts/`(AppLanding, LegalPage, SupportPage, HomePage), 경로 생성은 `src/lib/routes.ts`.
 - 앱 이미지는 `public/images/<slug>/`.
 

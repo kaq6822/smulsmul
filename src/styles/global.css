@@ -10,3 +10,24 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* 긴 문서와 표를 작은 화면에서도 읽을 수 있게 유지한다. */
+.legal-content {
+  overflow-wrap: anywhere;
+}
+
+.legal-content table {
+  display: block;
+  overflow-x: auto;
+}
+
+.legal-content th,
+.legal-content td {
+  min-width: 8rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
