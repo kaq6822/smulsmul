@@ -13,7 +13,7 @@ The App does not offer accounts or registration and does not collect or transmit
 
 The following information is stored only on your device to provide the App's features:
 
-- Clothing names, brands, types, purposes, tags you create, care methods, wash cycles, and wear and wash history with notes
+- Clothing names, brands, types, purposes, tags you create, care methods, wash cycles, purchase dates, and wear and wash history with notes
 - When and why you archived an item
 - Laundry-basket data, notification preferences, the last-used screen, and other app preferences
 - Photos of clothing that you choose or take in the App
@@ -43,7 +43,7 @@ The App does not use third-party SDKs for advertising, behavioral analytics, or 
 
 ## 6. Retention and Deletion
 
-Wardrobe data and photos remain on your device. Deleting an item in the App also deletes its photo and its wear and wash history, and deleting the App may remove locally stored information. Backup files you create are stored outside the App, so they are not removed by the App and you must delete them yourself. To guard against data loss from changing devices, loss, device failure, or deleting the App, use the backup feature or keep separate copies of important information.
+Wardrobe data and photos remain on your device. Deleting an item in the App also removes its photo and its wear and wash history, and deleting the App may remove locally stored information. Backup files you create are stored outside the App, so they are not removed by the App and you must delete them yourself. To guard against data loss from changing devices, loss, device failure, or deleting the App, use the backup feature or keep separate copies of important information.
 
 ## 7. Children's Privacy
 
@@ -54,3 +54,8 @@ The Service Provider does not knowingly collect personal information from childr
 This policy may be updated to reflect changes to the App or applicable law. Updates will be posted on this page.
 
 - Email: smulsmul2020@gmail.com
+
+## Revision History
+
+- 2026-10-18: Added backup and restore, notifications, and archive and tag information, and clarified deletion.
+- 2026-09-27: Initial version
