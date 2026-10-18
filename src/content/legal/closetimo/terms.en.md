@@ -32,3 +32,8 @@ Wash cycles and care status are reference guidance based on the values you enter
 ## 5. Changes and Contact
 
 These Terms may change. Updates will be posted on this page. Contact: smulsmul2020@gmail.com
+
+## Revision History
+
+- 2026-10-18: Added backup, restore, and archive features and the scope of liability for data loss and care guidance.
+- 2026-09-27: Initial version
