@@ -35,9 +35,10 @@ lastUpdated: 2026-11-03
 
 - 기기 정보(제조사, 모델, OS 버전, 사용 가능한 하드웨어 가속기)
 - 앱 정보(패키지 이름, 앱 버전)
-- 기능 사용 정보(기능 종류와 버전, 처리 시간, 입력·출력 크기, 오류 코드)
+- 기능 사용 정보(기능 종류와 버전, 설정, 처리 시간, 입력·출력 크기, 오류 코드, 기기 내 AI 사용 시 설정 언어)
+- 기기·설치 단위 식별자(설치를 구분하기 위한 값, 기기 내 AI 사용 시 Google이 정한 이용자·기기 식별자 포함)
 
-이 정보는 이용자를 직접 식별하지 않으며, Google의 [ML Kit 데이터 공개 안내](https://developers.google.com/ml-kit/android-data-disclosure)와 개인정보처리방침에 따라 처리됩니다.
+이 정보에는 사진이나 옷장 기록이 포함되지 않습니다. 정보는 암호화(HTTPS)되어 전송되며 Google의 [ML Kit 데이터 공개 안내](https://developers.google.com/ml-kit/android-data-disclosure)와 개인정보처리방침에 따라 처리됩니다.
 
 ## 4. 백업과 복원
 
