@@ -35,9 +35,10 @@ However, ML Kit on Android may send the following information to Google to impro
 
 - Device information (manufacturer, model, OS version, available hardware accelerators)
 - App information (package name, app version)
-- Feature usage information (feature type and version, processing latency, input and output sizes, error codes)
+- Feature usage information (feature type and version, configuration, processing latency, input and output sizes, error codes, and configured languages when on-device AI is used)
+- Device and per-installation identifiers (values that distinguish installations, including user or device identifiers defined by Google when on-device AI is used)
 
-This information does not directly identify you and is handled under Google's [ML Kit data disclosure](https://developers.google.com/ml-kit/android-data-disclosure) and privacy policy.
+This information does not include your photos or wardrobe data. It is encrypted in transit (HTTPS) and handled under Google's [ML Kit data disclosure](https://developers.google.com/ml-kit/android-data-disclosure) and privacy policy.
 
 ## 4. Backup and Restore
 
