@@ -1,7 +1,7 @@
 ---
 title: Privacy Policy
 type: privacy
-status: draft
+effectiveDate: 2026-11-25
 ---
 
 This policy covers data processed on the device by the BodyMark mobile app and information received through support inquiries. BodyMark is provided by Smulsmul, represented by Beomjun Kang (“the provider”).

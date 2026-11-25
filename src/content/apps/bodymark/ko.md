@@ -3,8 +3,6 @@ name: 바디마크
 tagline: 회원의 레슨과 자세 변화를 한 곳에
 icon: /images/bodymark/icon.png
 supportEmail: smulsmul2020@gmail.com
-status: preview
-availabilityNote: Android와 iOS용 앱을 출시 준비 중입니다.
 order: 6
 themeColor: '#16766E'
 features:

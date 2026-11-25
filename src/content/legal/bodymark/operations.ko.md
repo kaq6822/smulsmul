@@ -1,7 +1,7 @@
 ---
 title: 회원 기록 운영정책
 type: operations
-status: draft
+effectiveDate: 2026-11-25
 ---
 
 ## 촬영 전

@@ -3,8 +3,6 @@ name: BodyMark
 tagline: Member lessons and posture progress in one place
 icon: /images/bodymark/icon.png
 supportEmail: smulsmul2020@gmail.com
-status: preview
-availabilityNote: BodyMark for Android and iOS is preparing for release.
 order: 6
 themeColor: '#16766E'
 features:

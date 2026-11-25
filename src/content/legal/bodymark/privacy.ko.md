@@ -1,7 +1,7 @@
 ---
 title: 개인정보처리방침
 type: privacy
-status: draft
+effectiveDate: 2026-11-25
 ---
 
 이 방침은 스물스물(대표 강범준, 이하 “운영자”)이 제공하는 바디마크(BodyMark) 모바일 앱의 기기 내 데이터 처리와 지원 문의에 적용됩니다.

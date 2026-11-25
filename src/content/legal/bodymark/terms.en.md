@@ -1,12 +1,12 @@
 ---
 title: Terms of Use
 type: terms
-status: draft
+effectiveDate: 2026-11-25
 ---
 
 ## 1. Scope and features
 
-These terms apply to the BodyMark mobile app provided by Smulsmul, represented by Beomjun Kang. BodyMark provides member and lesson management, photo and video records, photo comparisons, and image export. The current pre-release version has no in-app purchases or subscriptions.
+These terms apply to the BodyMark mobile app provided by Smulsmul, represented by Beomjun Kang. BodyMark provides member and lesson management, photo and video records, photo comparisons, and image export. The app has no in-app purchases or subscriptions.
 
 ## 2. Lawful use of member records
 

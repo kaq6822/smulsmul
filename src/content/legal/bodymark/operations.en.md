@@ -1,7 +1,7 @@
 ---
 title: Member Records Policy
 type: operations
-status: draft
+effectiveDate: 2026-11-25
 ---
 
 ## Before recording
